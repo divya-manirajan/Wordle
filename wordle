@@ -1,7 +1,9 @@
 TRIES = 5
 COUNT = 0
 
-key = "HELLO".upper() #random 5 letter word
+from random_word import random_word
+
+key = random_word.upper() #random 5 letter word
 
 #guess = "JELLO" #input by user
 

@@ -1,4 +1,4 @@
-TRIES = 5
+TRIES = 6
 COUNT = 0
 
 from random_word import random_word

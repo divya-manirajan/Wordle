@@ -4,7 +4,7 @@ For Python:
 
     add used letter tracking
 
-    include difficulty setting which certain words
+    include difficulty setting with certain words
     
     reformat code
         make separate functions and a main function

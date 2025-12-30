@@ -1,4 +1,8 @@
 For Python:
+
+    convert words.py to a txt file
+    add code in word_selection to pull from txt file
+
     Make output look nice
 
     add used letter tracking
@@ -6,7 +10,7 @@ For Python:
     include difficulty setting which certain words
     
     reformat code
-        make separate functions and a main functio
+        make separate functions and a main function
         make it simpler to read
     
     

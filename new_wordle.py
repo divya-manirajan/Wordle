@@ -52,6 +52,7 @@ def play_round(MAX_TRIES, guess_counter):
         guess = input("Enter a 5 letter guess: ").lower() #turn guess lower-case
           
         if guess in ALL_WORDS:
+            #Update used letter tracker
             for letter in guess:
                 if letter in SOLUTION:
                     used_letters[letter.upper()]='🟨 '
@@ -62,15 +63,14 @@ def play_round(MAX_TRIES, guess_counter):
                 print("You got it!")
                 for i in range (5):
                     game_board[guess_counter][i] = ("["+guess[i].upper() + "🟩 ]")
-                    used_letters[guess[i].upper()]='🟩 '
+                    used_letters[guess[i].upper()]='🟩 ' #Override used letter tracker
                 display(game_board)
                 break
             
             for i in range (5):
                 if guess[i] == SOLUTION[i]:
                     game_board[guess_counter][i] = ("["+guess[i].upper() + "🟩 ]")
-                    used_letters[guess[i].upper()]='🟩 '
-
+                    used_letters[guess[i].upper()]='🟩 ' #Override used letter tracker
                 elif guess[i] in SOLUTION:
                     game_board[guess_counter][i] = ("["+guess[i].upper() + "🟨 ]")
                 else:

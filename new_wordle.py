@@ -1,4 +1,6 @@
 #start from scratch -- organize with functions and comments
+#add steps for double letters in solution
+#add color code for used letters
 
 import random #import random
 from word_selection import ALL_WORDS #import word bank

@@ -21,6 +21,7 @@ game_board = [["[   ]" for col in range(GAME_BOARD_COLS)] for row in range(GAME_
 def display(board):
     for row in board:
         print(*row)
+    print("Used Letters: ")
     for i in sorted(used_letters):
         print((i, used_letters[i]), end=" ")
 

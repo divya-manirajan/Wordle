@@ -26,7 +26,9 @@ def display(board):
 def reset():
     global used_letters
     global game_board
+    global guess_counter
     
+    guess_counter = 0
     used_letters = {}
     for row in range(GAME_BOARD_ROWS):
         for col in range(GAME_BOARD_COLS):
@@ -83,7 +85,7 @@ def play_round(MAX_TRIES, guess_counter):
     reset() #reset game board and used letter tracker 
     SOLUTION = pick_solution(ALL_WORDS).upper() #pick a random solution word
     display(game_board) #display initial game board
-    while guess_counter < 6:
+    while guess_counter < MAX_TRIES:
         print("\n",MAX_TRIES - guess_counter, " Tries Left")
         guess = input("Enter a 5 letter guess: ").upper() #turn guess upper-case
         if guess.lower() in ALL_WORDS:
@@ -102,7 +104,7 @@ def play_round(MAX_TRIES, guess_counter):
             
             else:
                 handle_no_repeated_letters(guess, SOLUTION, guess_counter)
-                
+
             display(game_board)
             guess_counter += 1
         else:

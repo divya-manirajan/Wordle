@@ -2,10 +2,6 @@ For Python:
 
     include difficulty setting with certain words
 
-    if guess has repeated letters then separate check - IN PROGRESS
-
-    implement unit testing with pytest 
-
 		add ReadMe to github 
  
 
